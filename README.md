@@ -3,3 +3,4 @@ Match me with the roomate of my dreams
 
 ### Authors
 Vincent Davis
+Angel Galeana
