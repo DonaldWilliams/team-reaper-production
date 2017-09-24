@@ -1,0 +1,22 @@
+Requirements:
+
+1.) A user should be able to create a profile so they can use the website.
+Estimation: 4 days
+
+2.) A user should be able to update any info about themselves on their profile at any time.
+Estimation: 3 days
+
+3.) A use should be able to send and accept a match request to another user of thier choosing.
+Estimation: 7 days
+
+4.) A user should be able to send a message to any user that they matched with.
+Estimation: 5 days
+
+5.) A user should be able to delete their profile at any time, if they do not want to have thier profile anymore.
+Estimate: 3 days
+
+6.) A user should be able to mark their locations so other users around their location can match with them.
+Estimate: 7 days
+
+7.) A user should be able to view a list of users that have the same interests as them.
+Estimate: 6 days
