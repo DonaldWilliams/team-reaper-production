@@ -6,7 +6,7 @@ Vincent Davis
 
 Donald Williams - wmanman63@siu.edu
 
-Jerry Haynes
+Jerry Haynes - haynes.jerry18@siu.edu
 
 
 Angel Galeana 
