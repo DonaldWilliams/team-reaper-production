@@ -9,5 +9,5 @@ Donald Williams
 Jerry Haynes
 
 
-Angel Galeana angel.galeanajr@siu.edu
+Angel Galeana 
 
