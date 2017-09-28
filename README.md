@@ -9,5 +9,5 @@ Donald Williams - wmanman63@siu.edu
 Jerry Haynes - haynes.jerry18@siu.edu
 
 
-Angel Galeana 
+Angel Galeana angel.galeanajr@siu.edu
 
