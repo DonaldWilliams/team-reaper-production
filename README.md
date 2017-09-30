@@ -13,7 +13,7 @@ Angel Galeana angel.galeanajr@siu.edu
 ## Installation
 Be sure to have your github setup up on your laptop. Here's some [useful commands to remember](https://github.com/SIU-CS/team-reaper-production/wiki/Git-Commands)
 #### Install Ruby
-We are using ruby version 2.4.1, the easiest way to install it is with [rvm](rvm.io) or the ruby version manager. The content you see bellow is meant to work by just copying and pasting the whole thing into your terminal.
+We are using ruby version 2.4.1, the easiest way to install it is with [rvm](https://rvm.io) or the ruby version manager. The content you see bellow is meant to work by just copying and pasting the whole thing into your terminal.
 ```bash
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB \
 \curl -sSL https://get.rvm.io | bash -s stable \
