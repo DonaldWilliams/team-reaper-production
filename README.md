@@ -10,6 +10,7 @@ Jerry Haynes - haynes.jerry18@siu.edu
 
 Angel Galeana angel.galeanajr@siu.edu
 
+<<<<<<< Updated upstream
 ## Installation
 Be sure to have your github setup up on your laptop. Here's some [useful commands to remember](https://github.com/SIU-CS/team-reaper-production/wiki/Git-Commands)
 #### Install Ruby
@@ -20,6 +21,9 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 rvm install 2.4.1 \
 gem install bundler
 ```
+=======
+Angel Galeana angel.galeanajr@siu.edu
+>>>>>>> Stashed changes
 
 #### Install Rails With The Applications
 
