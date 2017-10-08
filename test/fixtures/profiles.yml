@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  users: one
+  pet: false
+  pet_type: MyString
+  quiet: false
+  clean: false
+  messy: false
+  kind_of_clean: false
+  party: false
+  drink: false
+  smoke: false
+
+two:
+  users: two
+  pet: false
+  pet_type: MyString
+  quiet: false
+  clean: false
+  messy: false
+  kind_of_clean: false
+  party: false
+  drink: false
+  smoke: false
