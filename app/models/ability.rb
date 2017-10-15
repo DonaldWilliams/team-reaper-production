@@ -31,8 +31,6 @@ class Ability
 
     user ||= User.new # guest user (not logged in)
 
-    can :read, Profile
-    cannot :read, User
     can :manage, User, id: user.id
     can :manage, Profile, user_id: user.id
 

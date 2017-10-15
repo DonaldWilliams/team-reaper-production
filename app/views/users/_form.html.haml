@@ -11,7 +11,7 @@
         = f.label :last_name
         = f.text_field :last_name, placeholder: 'Last Name', class: 'form-control'
 
-      = f.fields_for :profile, Profile.new do |p|
+      = f.fields_for :profile, (Profile.new if @user.profile_nil?)  do |p|
         .row
           .col-md-6
             .form-group
@@ -20,7 +20,7 @@
           .col-md-6
             .form-group
               = p.label :pet_type
-              = p.text_field :pet_type, class: 'form-control'
+              = p.text_field :pet_type, placeholder: "#{@user.profile.pet_type unless @user.profile_nil?}", class: 'form-control'
         .row
           .col-md-6
             .form-group
@@ -63,6 +63,7 @@
           .col-md-6
             = p.label 'Whats your major'
             = p.text_field :major, class: 'form-control'
+            = p.hidden_field :user_id, value: current_user.id
         .actions
           = f.submit 'Save', class: 'btn btn-success btn-lg'
     .col-md-4
