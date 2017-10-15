@@ -9,7 +9,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable
 
-  validates_presence_of :email, :first_name, :last_name
+  validates_presence_of :first_name, :last_name, on: [:update]
+  validates_presence_of :email
   validates_format_of :email, with: /@/
 
   def has_role?(role_sym)
@@ -17,6 +18,10 @@ class User < ApplicationRecord
   end
 
   def full_name
-    self.first_name + ' ' + self.last_name
+    self.first_name + ' ' + self.last_name unless  self.first_name.nil? || self.last_name.nil?
+  end
+
+  def profile_nil?
+    self.profile.nil? || self.profile.pet_type.nil?
   end
 end

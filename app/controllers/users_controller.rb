@@ -1,8 +1,15 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_user, only: [:show,:edit,:create,:update]
 
   def index
-    @users = User.all
+    if current_user.has_role?(:admin)
+      @users = User.all
+    else
+      # Just For now work on better security
+      flash[:error] = "You don't have correct permission to view this page"
+      redirect_to root_path
+    end
   end
 
   def show
@@ -32,7 +39,7 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name,
         profile_attributes: [:id, :pet, :pet_type, :quiet, :noisy, :clean, :messy,
-                             :kind_of_clean, :party, :drink, :smoke, :study, :major])
+                             :kind_of_clean, :party, :drink, :smoke, :study, :major, :user_id])
     end
 
 end

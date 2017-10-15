@@ -2,67 +2,68 @@
   = errors_for @user
 
   .row
-    .col-md-6
+    .col-md-4
+    .col-md-4
       .form-group
         = f.label :first_name
         = f.text_field :first_name, placeholder: 'First Name', class: 'form-control'
-    .col-md-6
       .form-group
         = f.label :last_name
         = f.text_field :last_name, placeholder: 'Last Name', class: 'form-control'
 
-  = f.fields_for :profile, Profile.new do |p|
-    .row
-      .col-md-6
-        .form-group
-          = p.label :pet
-          = p.check_box :pet, class: 'form-control'
-      .col-md-6
-        .form-group
-          = p.label :pet_type
-          = p.text_field :pet_type, class: 'form-control'
-    .row
-      .col-md-6
-        .form-group
-          = p.label :quiet
-          = p.check_box :quiet, class: 'form-control'
-      .col-md-6
-        .form-group
-          = p.label :noisy
-          = p.check_box :noisy, class: 'form-control'
-    .row
-      .col-md-4
-        .form-group
-          = p.label :clean
-          = p.check_box :clean, class: 'form-control'
-      .col-md-4
-        .form-group
-          = p.label :messy
-          = p.check_box :messy, class: 'form-control'
-      .col-md-4
-        .form-group
-          = p.label :kind_of_clean
-          = p.check_box :kind_of_clean, class: 'form-control'
-    .row
-      .col-md-4
-        .form-group
-          = p.label :party
-          = p.check_box :party, class: 'form-control'
-      .col-md-4
-        .form-group
-          = p.label :drink
-          = p.check_box :drink, class: 'form-control'
-      .col-md-4
-        .form-group
-          = p.label :smoke
-          = p.check_box :smoke, class: 'form-control'
-    .row
-      .col-md-6
-        = p.label 'Do you study?'
-        = p.check_box :study, class: 'form-control'
-      .col-md-6
-        = p.label 'Whats your major'
-        = p.text_field :major, class: 'form-control'
-
-    .actions
-      = f.submit 'Save', class: 'btn btn-success btn-lg'
+      = f.fields_for :profile, (Profile.new if @user.profile_nil?)  do |p|
+        .row
+          .col-md-6
+            .form-group
+              = p.label :pet
+              = p.check_box :pet, class: 'form-control'
+          .col-md-6
+            .form-group
+              = p.label :pet_type
+              = p.text_field :pet_type, placeholder: "#{@user.profile.pet_type unless @user.profile_nil?}", class: 'form-control'
+        .row
+          .col-md-6
+            .form-group
+              = p.label :quiet
+              = p.check_box :quiet, class: 'form-control'
+          .col-md-6
+            .form-group
+              = p.label :noisy
+              = p.check_box :noisy, class: 'form-control'
+        .row
+          .col-md-4
+            .form-group
+              = p.label :clean
+              = p.check_box :clean, class: 'form-control'
+          .col-md-4
+            .form-group
+              = p.label :messy
+              = p.check_box :messy, class: 'form-control'
+          .col-md-4
+            .form-group
+              = p.label :kind_of_clean
+              = p.check_box :kind_of_clean, class: 'form-control'
+        .row
+          .col-md-4
+            .form-group
+              = p.label :party
+              = p.check_box :party, class: 'form-control'
+          .col-md-4
+            .form-group
+              = p.label :drink
+              = p.check_box :drink, class: 'form-control'
+          .col-md-4
+            .form-group
+              = p.label :smoke
+              = p.check_box :smoke, class: 'form-control'
+        .row
+          .col-md-6
+            = p.label 'Do you study?'
+            = p.check_box :study, class: 'form-control'
+          .col-md-6
+            = p.label 'Whats your major'
+            = p.text_field :major, class: 'form-control'
+            = p.hidden_field :user_id, value: current_user.id
+        .actions
+          = f.submit 'Save', class: 'btn btn-success btn-lg'
+    .col-md-4

@@ -3,25 +3,25 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
     create_table :profiles do |t|
       t.references :user, foreign_key: true
       # Section 1
-      t.boolean :pet
+      t.boolean :pet,           default: false
       t.string :pet_type
 
       # Section 2
-      t.boolean :quiet
-      t.boolean :noisy
+      t.boolean :quiet,         default: false
+      t.boolean :noisy,         default: false
 
       # Section 3
-      t.boolean :clean
-      t.boolean :messy
-      t.boolean :kind_of_clean
+      t.boolean :clean,         default: false
+      t.boolean :messy,         default: false
+      t.boolean :kind_of_clean, default: false
 
       # Section 4
-      t.boolean :party
-      t.boolean :drink
-      t.boolean :smoke
+      t.boolean :party,         default: false
+      t.boolean :drink,         default: false
+      t.boolean :smoke,         default: false
 
       # Section 5
-      t.boolean :study
+      t.boolean :study,         default: false 
       t.string :major
 
       t.timestamps
