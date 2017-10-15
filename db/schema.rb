@@ -14,20 +14,20 @@ ActiveRecord::Schema.define(version: 20171008221218) do
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
-    t.boolean  "pet"
+    t.boolean  "pet",           default: false
     t.string   "pet_type"
-    t.boolean  "quiet"
-    t.boolean  "noisy"
-    t.boolean  "clean"
-    t.boolean  "messy"
-    t.boolean  "kind_of_clean"
-    t.boolean  "party"
-    t.boolean  "drink"
-    t.boolean  "smoke"
-    t.boolean  "study"
+    t.boolean  "quiet",         default: false
+    t.boolean  "noisy",         default: false
+    t.boolean  "clean",         default: false
+    t.boolean  "messy",         default: false
+    t.boolean  "kind_of_clean", default: false
+    t.boolean  "party",         default: false
+    t.boolean  "drink",         default: false
+    t.boolean  "smoke",         default: false
+    t.boolean  "study",         default: false
     t.string   "major"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
