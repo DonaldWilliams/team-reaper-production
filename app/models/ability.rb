@@ -33,6 +33,7 @@ class Ability
 
     can :manage, User, id: user.id
     can :manage, Profile, user_id: user.id
+    can :manage, Message, user_id: user.id
 
     if user.has_role? :admin
       can :manage, :all
