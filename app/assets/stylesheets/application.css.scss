@@ -43,3 +43,47 @@ h6 {
   font-weight: 700;
   text-align: center;
 }
+
+.navbar{
+
+  ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #333;
+    list-style-type: none;
+  }
+
+  li{
+    display: block;
+  }
+
+  li{
+    color:red;
+    display: block;
+    padding: 14px 16px;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  li:hover{
+    background-color: #4CAF50;
+  }
+
+}
+
+.new_user{
+  border: 3px solid lightblue;
+  background: lightblue;
+  position: absolute;
+  z-index: 10;
+  padding-bottom: 25px;
+  top: 150px;
+  left: 50%;
+  margin-left: -170px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6)
+}
