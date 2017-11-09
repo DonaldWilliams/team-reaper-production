@@ -5,9 +5,14 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body{style: 'margin-top: 100px'}
-    %header
-      = render template: 'layouts/navigation'
-    %main{role: "main"}
-      = display_flash
-      = yield
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+
+  %body#myPage{style: 'margin-top: 100px'}
+  %header
+    = render template: 'layouts/navigation'
+  %main{role: "main"}
+    = display_flash
+    = yield

@@ -8,7 +8,7 @@
       .collapse.navbar-collapse
         %ul.nav.navbar-nav
     .collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-center
+      %ul.nav.navbar-nav.navbar-right
         - if current_user
           %li= link_to 'Home', root_path
           %li= link_to 'Profile', user_path(current_user)
