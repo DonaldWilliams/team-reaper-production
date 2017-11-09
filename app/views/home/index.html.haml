@@ -1,4 +1,84 @@
-%h1 Welcome to RadRoomies 
+
+/%h1 Welcome to RadRoomies
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#test.html"}
+        %img.imgnav{:alt => "RADROOMIES", :src => "IMG_0612.JPG"}/
+    #myNavbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#create"} CREATE
+        %li
+          %a{:href => "#match"} MATCH
+        %li
+          %a{:href => "#live"} LIVE
+        %li
+          %a{:href => ""} SIGN-IN
+
+:css
+  #box1{
+      height: 100vh;
+      width: 100%;
+      background-image: url(Chicago-Night.jpg);
+      background-size: cover;
+      display: table;
+      background-attachment: fixed;
+  }
+
+  #box2{
+      height: 100vh;
+      width: 100%;
+      background-image: url(QS5WU44.jpg);
+      background-size: cover;
+      display: table;
+      background-attachment: fixed;
+      color: white;
+  }
+  #box3{
+      height: 100vh;
+      width: 100%;
+      background-image: url(ny.jpg);
+      background-size: cover;
+      display: table;
+      background-attachment: fixed;
+      color: white;
+  }
+
+/ Container (IOS)
+#box1
+  #create.container.text-right
+    %h2.aboutcreate CREATE.
+    .createbio
+      %p By using the latest technologies such as Swift and Objective-C we can  bring your ideas to life.
+    %button.button.button4 SIGN-UP
+    .padding
+/ Container (WEB)
+#box2
+  #about.container.text-right
+    %h2.aboutmatch MATCH.
+    .matchbio
+      %p By using the latest technologies such as Swift and Objective-C we can  bring your ideas to life.
+    %button.button.button5 More+
+/ Container (Security)
+#box3
+  #ios.container.text-right
+    %h2.aboutlive LIVE.
+    .secbio
+      %p We not only provide amazing web services and app development we provide security for your companies as was.
+    %button.button.button5 More+
+
+    %footer.text-center
+  %a.up-arrow{"data-toggle" => "tooltip", :href => "#myPage", :title => "TO TOP"}
+    %span.glyphicon.glyphicon-chevron-up
+  %br/
+  %br/
+  %p Made By REAPER
+
 /%p Find me in app/views/home/index.html.haml
 
 %h2= link_to 'login', new_user_session_path, class: 'btn btn-primary btn-lg'

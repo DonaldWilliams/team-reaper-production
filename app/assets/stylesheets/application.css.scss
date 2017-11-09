@@ -28,52 +28,111 @@
 
 body,
 html {
-  width: 100%;
-  height: 100%;
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #777;
+  margin: 0;
+  padding: 0;
 }
-
-body,
-h1,
-h2,
 h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-align: center;
+h4 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: #111;
+}
+.btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: .2s;
+      }
+  .btn:hover, .btn:focus {
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #000;
+        }
+
+.nav-tabs li a {
+    color: #777;
 }
 
-.navbar{
-
-  ul{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:  #333;
-    list-style-type: none;
-  }
-
-  li{
-    display: block;
-  }
-
-  li{
-    color:red;
-    display: block;
-    padding: 14px 16px;
-    border-right: 1px solid #bbb;
-    border-left: 1px solid #bbb;
-    text-decoration: none;
-    text-align: center;
-  }
-
-  li:hover{
-    background-color: #4CAF50;
-  }
-
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: white;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: black !important;
+}
+.navbar-nav li a:hover {
+    color: gray !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.dropdown-menu li a {
+    color: #000 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: red !important;
 }
 
+#match{
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#match{
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+#live{
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+.aboutcreate{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: black;
+
+}
+.aboutlive{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: black;
+
+}
+.createbio{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 35px;
+}
+.aboutmatch{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: black;
+}
+.matchbio{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 35px;
+}
 .new_user{
   border: 3px solid lightblue;
   background: lightblue;
