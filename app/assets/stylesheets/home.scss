@@ -9,3 +9,31 @@ body{
   background-size: cover;
   background-color: #464646;
 }
+
+#box1{
+    height: 100vh;
+    width: 100%;
+    background-image: url("Chicago-Night.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+#box2{
+    height: 100vh;
+    width: 100%;
+    background-image: url("QS5WU44.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: white;
+}
+#box3{
+    height: 100vh;
+    width: 100%;
+    background-image: url("ny.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: white;
+}
