@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  belongs_to :users
+  belongs_to :user
 
   def self.check_user_id (profile, match)
     profile.user_id == match.user_id
