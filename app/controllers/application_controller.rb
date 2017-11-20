@@ -15,10 +15,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-  rescue_from ActiveRecord::RecordNotFound do |execption|
-    flash[:error] = "Error 404: File Not Found"
-    redirect_to root_path
-  end
+  #rescue_from ActiveRecord::RecordNotFound do |execption|
+  #  flash[:error] = "Error 404: File Not Found"
+  #  redirect_to root_path
+  #end
 
   protected
     def configure_permitted_parameters
