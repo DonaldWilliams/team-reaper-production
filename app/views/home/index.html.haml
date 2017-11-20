@@ -1,32 +1,13 @@
 
 /%h1 Welcome to RadRoomies
-%nav.navbar.navbar-default.navbar-fixed-top
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#test.html"}
-        %img.imgnav{:alt => "RADROOMIES", :src => "IMG_0612.JPG"}/
-    #myNavbar.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#create"} CREATE
-        %li
-          %a{:href => "#match"} MATCH
-        %li
-          %a{:href => "#live"} LIVE
-        %li
-          %a{:href => ""} SIGN-IN
-
 / Container (IOS)
 #box1
   #create.container.text-right
     %h2.aboutcreate CREATE.
     .createbio
       %p By using the latest technologies such as Swift and Objective-C we can  bring your ideas to life.
-    %button.button.button4 SIGN-UP
+    %button.button.button4= link_to 'login', new_user_session_path
+
     .padding
 / Container (WEB)
 #box2
@@ -51,5 +32,3 @@
   %p Made By REAPER
 
 /%p Find me in app/views/home/index.html.haml
-
-%h2= link_to 'login', new_user_session_path, class: 'btn btn-primary btn-lg'
