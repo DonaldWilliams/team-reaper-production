@@ -1,13 +1,12 @@
-.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
-  .container
+%nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+  .container-fluid
     .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+      %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      .collapse.navbar-collapse
-        %ul.nav.navbar-nav
-    .collapse.navbar-collapse
+      = link_to "RADROOMIES", root_path, class: "navbar-brand"
+    #myNavbar.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         - if current_user
           %li= link_to 'Home', root_path
@@ -19,5 +18,7 @@
             %li= link_to 'Roles', roles_path
           %li= link_to 'Logout', destroy_user_session_path, method: :delete
         - else
-          %li= link_to 'Home', root_path
+          %li= link_to 'CREATE.',"#box1"
+          %li= link_to 'MATCH.', "#box2"
+          %li= link_to 'LIVE.', "#box3"
           %li= link_to 'Sign in', user_session_path
