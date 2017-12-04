@@ -43,6 +43,12 @@ class RolesControllerTest < ActionDispatch::IntegrationTest
       delete role_url(@role)
     end
 
+    # Test Case added by Donald
+ test "visiting Roles index" do
+   visit roles_url
+   assert_selector "h1", text: "Roles"
+ end
+
     assert_redirected_to roles_url
   end
 end
