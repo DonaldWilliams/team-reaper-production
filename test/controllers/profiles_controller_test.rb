@@ -45,7 +45,8 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to profiles_url
   end
-  # Test add by Angel
+
+   # Test add by Angel
   test "should not save profile without attributes" do
     profile = Profile.new
     assert_not profile.save
