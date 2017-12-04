@@ -15,10 +15,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get users_edit_url
     assert_response :success
   end
-  # Test add by Angel
-  test "should get user new" do
-    get users_new_url
-    assert_response :success
-  end
 
 end

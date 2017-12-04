@@ -25,7 +25,14 @@
  label{
    color:#4d4dff;
  }
+ .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
+ small {
+ display: block;
+ line-height: 1.428571429;
+ color: #999;
+ }
+ 
 body,
 html {
   font: 400 15px/1.8 Lato, sans-serif;
