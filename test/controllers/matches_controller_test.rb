@@ -11,4 +11,10 @@ class MatchesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Test Case added by Donald
+  test "visiting Matches index" do
+    visit matches_url
+    assert_selector "h1", text: "Matches"
+  end
+
 end

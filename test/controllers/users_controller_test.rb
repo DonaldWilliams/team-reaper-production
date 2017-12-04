@@ -21,4 +21,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Test Case added by Donald
+  test "visiting Roles index" do
+    visit roles_url
+    assert_selector "h1", text: "Roles"
+  end
+
 end
