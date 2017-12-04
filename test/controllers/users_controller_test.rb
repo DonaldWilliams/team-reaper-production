@@ -16,6 +16,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+   # Test add by Angel
+  test "should get user new" do
+    get users_new_url
+    assert_response :success
+  end
+
   # Test Case added by Donald
   test "visiting Roles index" do
     visit users_url
