@@ -18,8 +18,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   # Test Case added by Donald
   test "visiting Roles index" do
-    visit roles_url
-    assert_selector "h1", text: "Roles"
+    visit users_url
+    assert_selector "h1", text: "Users"
   end
 
 end
