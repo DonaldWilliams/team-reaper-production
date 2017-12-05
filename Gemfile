@@ -25,7 +25,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'cancancan', '~> 1.10'
 gem 'devise'
 gem 'haml-rails'
-gem "recaptcha", require: "recaptcha/rails"
+gem 'recaptcha', require: 'recaptcha/rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

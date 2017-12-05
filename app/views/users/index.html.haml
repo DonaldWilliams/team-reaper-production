@@ -1,35 +1,36 @@
-%h1 All Users
+.container
+  %h1 All Users
 
-%table.table.table-hover
-  %thead
-    %tr
-      %th User
-      %th Pet
-      %th Pet type
-      %th Quiet
-      %th Clean
-      %th Messy
-      %th Kind of clean
-      %th Party
-      %th Drink
-      %th Smoke
-      %th
-      %th
-      %th
-
-  %tbody
-    - @users.each do |user|
+  %table.table.table-hover
+    %thead
       %tr
-        - unless user.first_name.nil?
-          %td= user.full_name
-          %td= user.profile.pet
-          %td= user.profile.pet_type
-          %td= user.profile.quiet
-          %td= user.profile.clean
-          %td= user.profile.messy
-          %td= user.profile.kind_of_clean
-          %td= user.profile.party
-          %td= user.profile.drink
-          %td= user.profile.smoke
-          %td= link_to 'Show', user
-          %td= link_to 'Edit', edit_user_path(user)
+        %th User
+        %th Pet
+        %th Pet type
+        %th Quiet
+        %th Clean
+        %th Messy
+        %th Kind of clean
+        %th Party
+        %th Drink
+        %th Smoke
+        %th
+        %th
+        %th
+
+    %tbody
+      - @users.each do |user|
+        %tr
+          - unless user.first_name.nil?
+            %td= user.full_name
+            %td= user.profile.pet
+            %td= user.profile.pet_type
+            %td= user.profile.quiet
+            %td= user.profile.clean
+            %td= user.profile.messy
+            %td= user.profile.kind_of_clean
+            %td= user.profile.party
+            %td= user.profile.drink
+            %td= user.profile.smoke
+            %td= link_to 'Show', user, class: 'btn btn-md btn-success'
+            %td= link_to 'Edit', edit_user_path(user), class: 'btn btn-md btn-warning'

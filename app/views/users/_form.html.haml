@@ -1,7 +1,6 @@
 
 = form_for @user do |f|
   = errors_for @user
-
   .row
     .col-md-4
     .col-md-4
@@ -14,7 +13,6 @@
 
       = f.fields_for :profile, (Profile.new if @user.profile_nil?)  do |p|
         .row
-        .row
           %h3.profile Some roomies are allergic to pets! With that being said, do you have one? and if so, what kind?:
           .col-md-6
             .form-group
@@ -25,7 +23,6 @@
               = p.label :pet_type
               = p.text_field :pet_type, placeholder: "#{@user.profile.pet_type unless @user.profile_nil?}", class: 'form-control'
         .row
-        .row
           %h3.profile Some roomies like to rock out, but some may just want peace and quiet. What is your typical noise level:
           .col-md-6
             .form-group
@@ -35,7 +32,6 @@
             .form-group
               = p.label :noisy
               = p.check_box :noisy, class: 'form-control'
-        .row
         .row
           %h3.profile What type of organized roomie are you?:
           .col-md-4
@@ -51,7 +47,6 @@
               = p.label :kind_of_clean
               = p.check_box :kind_of_clean, class: 'form-control'
         .row
-        .row
           %h3.profile Don't be a party pooper to your roomie. Do you like to:
           .col-md-4
             .form-group
@@ -66,15 +61,27 @@
               = p.label :smoke
               = p.check_box :smoke, class: 'form-control'
         .row
-        .row
           %h3.profile Shhh! You or a roomie may have some studying to do. So,:
           .col-md-6
-            = p.label 'Do you study often?'
-            = p.check_box :study, class: 'form-control'
+            .form-group
+              = p.label 'Do you study often?'
+              = p.check_box :study, class: 'form-control'
           .col-md-6
-            = p.label 'Whats your major'
-            = p.text_field :major, class: 'form-control'
-            = p.hidden_field :user_id, value: current_user.id
+            .form-group
+              = p.label 'Whats your major'
+              = p.text_field :major, class: 'form-control'
+              = p.hidden_field :user_id, value: current_user.id
+        .row
+          .form-group
+            .col-md-6
+              = p.label 'Upload Image'
+              = p.file_field :avatar, class: 'form-control'
+            .col-md-6
+              - if p.object.avatar?
+                = image_tag p.object.avatar.thumb.url
+                = p.label :remove_avatar
+                = p.check_box :remove_avatar
+
         .actions
           = f.submit 'Save', class: 'btn btn-success btn-lg'
     .col-md-4
