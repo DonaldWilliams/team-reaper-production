@@ -1,5 +1,8 @@
 class Profile < ApplicationRecord
   belongs_to :user
+  mount_uploader :avatar, AvatarUploader
+
+  validates_presence_of :avatar
 
   def self.check_user_id (profile, match)
     profile.user_id == match.user_id

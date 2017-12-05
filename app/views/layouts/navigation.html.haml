@@ -9,7 +9,6 @@
     #myNavbar.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         - if current_user
-          %li= link_to 'Home', root_path
           %li= link_to 'Profile', user_path(current_user)
           %li= link_to 'Roomate Matches', matches_path
           %li= link_to 'Inbox',messages_path

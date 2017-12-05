@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017223423) do
+ActiveRecord::Schema.define(version: 20171203220304) do
 
   create_table "messages", force: :cascade do |t|
     t.integer  "user_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20171017223423) do
     t.string   "major"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "avatar"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

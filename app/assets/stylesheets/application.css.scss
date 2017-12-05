@@ -32,7 +32,7 @@
  line-height: 1.428571429;
  color: #999;
  }
- 
+
 body,
 html {
   font: 400 15px/1.8 Lato, sans-serif;
@@ -40,6 +40,15 @@ html {
   margin: 0;
   padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+
 h3,
 h4 {
   margin: 10px 0 30px 0;
@@ -47,18 +56,6 @@ h4 {
   font-size: 20px;
   color: #111;
 }
-.btn {
-        padding: 10px 20px;
-        background-color: #333;
-        color: #f1f1f1;
-        border-radius: 0;
-        transition: .2s;
-      }
-  .btn:hover, .btn:focus {
-        border: 1px solid #333;
-        background-color: #fff;
-        color: #000;
-        }
 
 .nav-tabs li a {
     color: #777;
@@ -152,4 +149,30 @@ h4 {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6)
+}
+
+.fb-profile img.fb-image-lg {
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.fb-image-profile {
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+
+@media (max-width:768px) {
+
+  .fb-profile-text>h1 {
+    font-weight: 700;
+    font-size:16px;
+  }
+
+  .fb-image-profile {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
 }
