@@ -51,19 +51,19 @@
                   %p= match.pet_type ? "Pet Type: #{match.pet_type}" : ''
 
                 - if Profile.noise_section(@profile,match)
-                  %p= match.noisy ? 'I Like Noise Too!' : ''
-                  %p= match.quiet ? 'I Like Quiet Too!' : ''
+                  %p= match.noisy ? 'I Like Noise!' : ''
+                  %p= match.quiet ? 'I Like Quiet!' : ''
 
                 - if Profile.clean_section(@profile, match)
-                  %p= match.clean ? 'I Like My Space Clean Too!' : ''
-                  %p= match.messy ? 'My Space Is Usually Messy Too!' : ''
-                  %p= match.kind_of_clean ? 'My Space Is Usually Kind Of Messy Too!' : ''
+                  %p= match.clean ? 'I Like My Space Clean!' : ''
+                  %p= match.messy ? 'My Space Is Usually Messy!' : ''
+                  %p= match.kind_of_clean ? 'My Space Is Usually Kind Of Messy!' : ''
 
                 - if Profile.fun_section(@profile, match)
-                  %p= match.party ? 'I Like To Party Too!' : ''
-                  %p= match.drink ? 'I Like To Drink Too!' : ''
-                  %p= match.smoke ? 'I Like To Smoke Too!' : ''
+                  %p= match.party ? 'I Like To Party!' : ''
+                  %p= match.drink ? 'I Like To Drink!' : ''
+                  %p= match.smoke ? 'I Like To Smoke!' : ''
 
                 - if Profile.study_section(@profile, match)
-                  %p= match.study ? 'I Like To Study Too!' : ''
+                  %p= match.study ? 'I Like To Study!' : ''
                   %p= match.study ? "Major: #{match.major}" : ''
