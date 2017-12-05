@@ -1,7 +1,8 @@
 .container
+  %h1 Profile
   .fb-profile
     = image_tag 'background.jpg', align: 'left', alt: 'Profile image background', class: 'fb-image-lg'
-    = image_tag @user.profile.avatar, align: 'left', alt: 'Profile image', class: 'fb-image-profile thumbnail'
+    = image_tag @user.profile.avatar, align: 'left', alt: 'Profile image', class: 'fb-image-profile thumbnail' unless @user.profile.nil?
     .fb-profile-text
       %h1= @user.full_name
       - unless @user.profile.nil?

@@ -3,41 +3,42 @@
   %hr
   .row
     - @matches.each do |match|
-      - if Profile.pet_section(@profile,match) || Profile.noise_section(@profile,match) || Profile.clean_section(@profile,match) || Profile.fun_section(@profile,match) || Profile.study_section(@profile,match)
-        - unless match.user.nil?
-          .col-xs-12.col-sm-6.col-md-6
-            .well.well-sm
-              .row
-                .col-sm-6.col-md-4= image_tag match.avatar, alt: "", class: 'img-rounded img-responsive'
-                .col-sm-6.col-md-8
-                  %h4= match.user.full_name
-                  %i.glyphicon.glyphicon-envelope= " #{match.user.email}"
+      - unless @profile.nil?
+        - if Profile.pet_section(@profile,match) || Profile.noise_section(@profile,match) || Profile.clean_section(@profile,match) || Profile.fun_section(@profile,match) || Profile.study_section(@profile,match)
+          - unless match.user.nil?
+            .col-xs-12.col-sm-6.col-md-6
+              .well.well-sm
+                .row
+                  .col-sm-6.col-md-4= image_tag match.avatar, alt: "", class: 'img-rounded img-responsive'
+                  .col-sm-6.col-md-8
+                    %h4= match.user.full_name
+                    %i.glyphicon.glyphicon-envelope= " #{match.user.email}"
 
-                  - if Profile.pet_section(@profile,match)
-                    %p= match.pet_type ? "Pet Type: #{match.pet_type}" : ''
+                    - if Profile.pet_section(@profile,match)
+                      %p= match.pet_type ? "Pet Type: #{match.pet_type}" : ''
 
-                  - if Profile.noise_section(@profile,match)
-                    %p= match.noisy ? 'I Like Noise Too!' : ''
-                    %p= match.quiet ? 'I Like Quiet Too!' : ''
+                    - if Profile.noise_section(@profile,match)
+                      %p= match.noisy ? 'I Like Noise Too!' : ''
+                      %p= match.quiet ? 'I Like Quiet Too!' : ''
 
-                  - if Profile.clean_section(@profile, match)
-                    %p= match.clean ? 'I Like My Space Clean Too!' : ''
-                    %p= match.messy ? 'My Space Is Usually Messy Too!' : ''
-                    %p= match.kind_of_clean ? 'My Space Is Usually Kind Of Messy Too!' : ''
+                    - if Profile.clean_section(@profile, match)
+                      %p= match.clean ? 'I Like My Space Clean Too!' : ''
+                      %p= match.messy ? 'My Space Is Usually Messy Too!' : ''
+                      %p= match.kind_of_clean ? 'My Space Is Usually Kind Of Messy Too!' : ''
 
-                  - if Profile.fun_section(@profile, match)
-                    %p= match.party ? 'I Like To Party Too!' : ''
-                    %p= match.drink ? 'I Like To Drink Too!' : ''
-                    %p= match.smoke ? 'I Like To Smoke Too!' : ''
+                    - if Profile.fun_section(@profile, match)
+                      %p= match.party ? 'I Like To Party Too!' : ''
+                      %p= match.drink ? 'I Like To Drink Too!' : ''
+                      %p= match.smoke ? 'I Like To Smoke Too!' : ''
 
-                  - if Profile.study_section(@profile, match)
-                    %p= match.study ? 'I Like To Study Too!' : ''
-                    %p= match.study ? "Major: #{match.major}" : ''
+                    - if Profile.study_section(@profile, match)
+                      %p= match.study ? 'I Like To Study Too!' : ''
+                      %p= match.study ? "Major: #{match.major}" : ''
   %h1 All Roomies
   %hr
   .row
     - @matches.each do |match|
-      - unless match.user.nil?
+      - unless match.user.nil? || @profile.nil?
         .col-xs-12.col-sm-6.col-md-6
           .well.well-sm
             .row
